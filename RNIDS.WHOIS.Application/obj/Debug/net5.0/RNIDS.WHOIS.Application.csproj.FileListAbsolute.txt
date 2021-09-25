@@ -10,6 +10,6 @@
 /Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.Application/obj/Debug/net5.0/RNIDS.WHOIS.Application.dll
 /Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.Application/obj/Debug/net5.0/ref/RNIDS.WHOIS.Application.dll
 /Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.Application/obj/Debug/net5.0/RNIDS.WHOIS.Application.pdb
-/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.Application/bin/Debug/net5.0/RNIDS.WHOIS.Domain.dll
-/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.Application/bin/Debug/net5.0/RNIDS.WHOIS.Domain.pdb
 /Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.Application/obj/Debug/net5.0/RNIDS.WHOIS.Application.csproj.CopyComplete
+/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.Application/bin/Debug/net5.0/RNIDS.WHOIS.Core.dll
+/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.Application/bin/Debug/net5.0/RNIDS.WHOIS.Core.pdb

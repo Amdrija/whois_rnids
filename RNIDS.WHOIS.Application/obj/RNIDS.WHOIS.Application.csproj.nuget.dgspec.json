@@ -29,8 +29,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.Domain/RNIDS.WHOIS.Domain.csproj": {
-                "projectPath": "/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.Domain/RNIDS.WHOIS.Domain.csproj"
+              "/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.Core/RNIDS.WHOIS.Core.csproj": {
+                "projectPath": "/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.Core/RNIDS.WHOIS.Core.csproj"
               }
             }
           }
@@ -69,14 +69,14 @@
         }
       }
     },
-    "/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.Domain/RNIDS.WHOIS.Domain.csproj": {
+    "/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.Core/RNIDS.WHOIS.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.Domain/RNIDS.WHOIS.Domain.csproj",
-        "projectName": "RNIDS.WHOIS.Domain",
-        "projectPath": "/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.Domain/RNIDS.WHOIS.Domain.csproj",
+        "projectUniqueName": "/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.Core/RNIDS.WHOIS.Core.csproj",
+        "projectName": "RNIDS.WHOIS.Core",
+        "projectPath": "/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.Core/RNIDS.WHOIS.Core.csproj",
         "packagesPath": "/Users/andrija/.nuget/packages/",
-        "outputPath": "/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.Domain/obj/",
+        "outputPath": "/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.Core/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

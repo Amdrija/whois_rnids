@@ -1,7 +1,7 @@
 using System;
 using System.Globalization;
 
-namespace RNIDS.WHOIS.Domain.Services
+namespace RNIDS.WHOIS.Core.Services
 {
     public static class PunyCodeConverter
     {

@@ -3,9 +3,7 @@
 /Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.TCP/bin/Debug/net5.0/ref/RNIDS.WHOIS.TCP.dll
 /Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.TCP/bin/Debug/net5.0/RNIDS.WHOIS.TCP.pdb
 /Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.TCP/bin/Debug/net5.0/RNIDS.WHOIS.Application.dll
-/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.TCP/bin/Debug/net5.0/RNIDS.WHOIS.Domain.dll
 /Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.TCP/bin/Debug/net5.0/RNIDS.WHOIS.Application.pdb
-/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.TCP/bin/Debug/net5.0/RNIDS.WHOIS.Domain.pdb
 /Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.TCP/obj/Debug/net5.0/RNIDS.WHOIS.TCP.csproj.AssemblyReference.cache
 /Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.TCP/obj/Debug/net5.0/RNIDS.WHOIS.TCP.GeneratedMSBuildEditorConfig.editorconfig
 /Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.TCP/obj/Debug/net5.0/RNIDS.WHOIS.TCP.AssemblyInfoInputs.cache
@@ -15,3 +13,5 @@
 /Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.TCP/obj/Debug/net5.0/RNIDS.WHOIS.TCP.dll
 /Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.TCP/obj/Debug/net5.0/ref/RNIDS.WHOIS.TCP.dll
 /Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.TCP/obj/Debug/net5.0/RNIDS.WHOIS.TCP.pdb
+/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.TCP/bin/Debug/net5.0/RNIDS.WHOIS.Core.dll
+/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.TCP/bin/Debug/net5.0/RNIDS.WHOIS.Core.pdb

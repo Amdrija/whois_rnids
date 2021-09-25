@@ -1,7 +1,7 @@
 using System.Threading.Tasks;
 using RNIDS.WHOIS.Application.Base;
 using RNIDS.WHOIS.Application.Interfaces.Repositories;
-using RNIDS.WHOIS.Domain.Services;
+using RNIDS.WHOIS.Core.Services;
 
 namespace RNIDS.WHOIS.Application.UseCases.GetWhoIsInformation
 {

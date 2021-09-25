@@ -1,9 +1,9 @@
-using RNIDS.WHOIS.Domain.Models;
+using RNIDS.WHOIS.Core.Models;
 
 namespace RNIDS.WHOIS.Application.UseCases.GetWhoIsInformation
 {
     public class GetWhoIsInformationResponse
     {
-        public  string Information { get; init; }
+        public  Core.Models.Domain Information { get; init; }
     }
 }

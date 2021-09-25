@@ -13,5 +13,5 @@
 /Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.SerilogLogger/obj/Debug/net5.0/RNIDS.WHOIS.SerilogLogger.dll
 /Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.SerilogLogger/obj/Debug/net5.0/ref/RNIDS.WHOIS.SerilogLogger.dll
 /Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.SerilogLogger/obj/Debug/net5.0/RNIDS.WHOIS.SerilogLogger.pdb
-/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.SerilogLogger/bin/Debug/net5.0/RNIDS.WHOIS.Domain.dll
-/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.SerilogLogger/bin/Debug/net5.0/RNIDS.WHOIS.Domain.pdb
+/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.SerilogLogger/bin/Debug/net5.0/RNIDS.WHOIS.Core.dll
+/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.SerilogLogger/bin/Debug/net5.0/RNIDS.WHOIS.Core.pdb

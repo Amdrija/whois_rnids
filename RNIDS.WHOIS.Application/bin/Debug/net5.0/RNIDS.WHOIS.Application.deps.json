@@ -9,7 +9,7 @@
       "RNIDS.WHOIS.Application/1.0.0": {
         "dependencies": {
           "Newtonsoft.Json": "13.0.1",
-          "RNIDS.WHOIS.Domain": "1.0.0"
+          "RNIDS.WHOIS.Core": "1.0.0"
         },
         "runtime": {
           "RNIDS.WHOIS.Application.dll": {}
@@ -23,9 +23,9 @@
           }
         }
       },
-      "RNIDS.WHOIS.Domain/1.0.0": {
+      "RNIDS.WHOIS.Core/1.0.0": {
         "runtime": {
-          "RNIDS.WHOIS.Domain.dll": {}
+          "RNIDS.WHOIS.Core.dll": {}
         }
       }
     }
@@ -43,7 +43,7 @@
       "path": "newtonsoft.json/13.0.1",
       "hashPath": "newtonsoft.json.13.0.1.nupkg.sha512"
     },
-    "RNIDS.WHOIS.Domain/1.0.0": {
+    "RNIDS.WHOIS.Core/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

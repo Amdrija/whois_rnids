@@ -11,14 +11,14 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
-      "RNIDS.WHOIS.Domain/1.0.0": {
+      "RNIDS.WHOIS.Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "compile": {
-          "bin/placeholder/RNIDS.WHOIS.Domain.dll": {}
+          "bin/placeholder/RNIDS.WHOIS.Core.dll": {}
         },
         "runtime": {
-          "bin/placeholder/RNIDS.WHOIS.Domain.dll": {}
+          "bin/placeholder/RNIDS.WHOIS.Core.dll": {}
         }
       }
     }
@@ -51,16 +51,16 @@
         "packageIcon.png"
       ]
     },
-    "RNIDS.WHOIS.Domain/1.0.0": {
+    "RNIDS.WHOIS.Core/1.0.0": {
       "type": "project",
-      "path": "../RNIDS.WHOIS.Domain/RNIDS.WHOIS.Domain.csproj",
-      "msbuildProject": "../RNIDS.WHOIS.Domain/RNIDS.WHOIS.Domain.csproj"
+      "path": "../RNIDS.WHOIS.Core/RNIDS.WHOIS.Core.csproj",
+      "msbuildProject": "../RNIDS.WHOIS.Core/RNIDS.WHOIS.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
       "Newtonsoft.Json >= 13.0.1",
-      "RNIDS.WHOIS.Domain >= 1.0.0"
+      "RNIDS.WHOIS.Core >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -92,8 +92,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.Domain/RNIDS.WHOIS.Domain.csproj": {
-              "projectPath": "/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.Domain/RNIDS.WHOIS.Domain.csproj"
+            "/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.Core/RNIDS.WHOIS.Core.csproj": {
+              "projectPath": "/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.Core/RNIDS.WHOIS.Core.csproj"
             }
           }
         }

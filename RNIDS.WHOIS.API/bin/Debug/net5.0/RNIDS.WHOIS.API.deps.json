@@ -516,7 +516,7 @@
       "RNIDS.WHOIS.Application/1.0.0": {
         "dependencies": {
           "Newtonsoft.Json": "13.0.1",
-          "RNIDS.WHOIS.Domain": "1.0.0"
+          "RNIDS.WHOIS.Core": "1.0.0"
         },
         "runtime": {
           "RNIDS.WHOIS.Application.dll": {}
@@ -525,12 +525,12 @@
           "RNIDS.WHOIS.Application.dll": {}
         }
       },
-      "RNIDS.WHOIS.Domain/1.0.0": {
+      "RNIDS.WHOIS.Core/1.0.0": {
         "runtime": {
-          "RNIDS.WHOIS.Domain.dll": {}
+          "RNIDS.WHOIS.Core.dll": {}
         },
         "compile": {
-          "RNIDS.WHOIS.Domain.dll": {}
+          "RNIDS.WHOIS.Core.dll": {}
         }
       },
       "RNIDS.WHOIS.SerilogLogger/1.0.0": {
@@ -2363,7 +2363,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "RNIDS.WHOIS.Domain/1.0.0": {
+    "RNIDS.WHOIS.Core/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

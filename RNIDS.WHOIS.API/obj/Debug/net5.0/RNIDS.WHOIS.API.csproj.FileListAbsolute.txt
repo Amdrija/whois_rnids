@@ -40,7 +40,7 @@
 /Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.API/obj/Debug/net5.0/RNIDS.WHOIS.API.genruntimeconfig.cache
 /Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.API/bin/Debug/net5.0/Microsoft.Extensions.DependencyModel.dll
 /Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.API/bin/Debug/net5.0/Scrutor.dll
-/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.API/bin/Debug/net5.0/RNIDS.WHOIS.Domain.dll
-/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.API/bin/Debug/net5.0/RNIDS.WHOIS.Domain.pdb
 /Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.API/bin/Debug/net5.0/RNIDS.WHOIS.TCP.dll
 /Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.API/bin/Debug/net5.0/RNIDS.WHOIS.TCP.pdb
+/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.API/bin/Debug/net5.0/RNIDS.WHOIS.Core.dll
+/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.API/bin/Debug/net5.0/RNIDS.WHOIS.Core.pdb
