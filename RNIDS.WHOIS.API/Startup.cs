@@ -37,7 +37,8 @@ namespace RNIDS.WHOIS
             services.AddLogger(this.Configuration)
                 .AddUseCases()
                 .AddUseCaseLogger()
-                .AddRepositories();
+                .AddRepositories()
+                .AddMongo(this.Configuration);
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

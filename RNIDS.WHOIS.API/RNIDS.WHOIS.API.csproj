@@ -13,6 +13,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\RNIDS.WHOIS.Application\RNIDS.WHOIS.Application.csproj" />
+      <ProjectReference Include="..\RNIDS.WHOIS.MongoDB\RNIDS.WHOIS.MongoDB.csproj" />
       <ProjectReference Include="..\RNIDS.WHOIS.SerilogLogger\RNIDS.WHOIS.SerilogLogger.csproj" />
       <ProjectReference Include="..\RNIDS.WHOIS.TCP\RNIDS.WHOIS.TCP.csproj" />
     </ItemGroup>

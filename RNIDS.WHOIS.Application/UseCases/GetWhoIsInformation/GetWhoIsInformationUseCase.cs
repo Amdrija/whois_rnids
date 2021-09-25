@@ -1,6 +1,7 @@
 using System.Threading.Tasks;
 using RNIDS.WHOIS.Application.Base;
 using RNIDS.WHOIS.Application.Interfaces.Repositories;
+using RNIDS.WHOIS.Core.Models;
 using RNIDS.WHOIS.Core.Services;
 
 namespace RNIDS.WHOIS.Application.UseCases.GetWhoIsInformation
@@ -9,23 +10,33 @@ namespace RNIDS.WHOIS.Application.UseCases.GetWhoIsInformation
     {
         private readonly IWhoIsInformationRepository repository;
         private readonly WhoIsProviderRepository providerRepository;
+        private readonly IDomainRepository domainRepository;
 
         public GetWhoIsInformationUseCase(
             IWhoIsInformationRepository repository,
-            WhoIsProviderRepository providerRepository)
+            WhoIsProviderRepository providerRepository,
+            IDomainRepository domainRepository)
         {
             this.repository = repository;
             this.providerRepository = providerRepository;
+            this.domainRepository = domainRepository;
         }
 
         public async Task<GetWhoIsInformationResponse> ExecuteAsync(GetWhoIsInformationRequest request)
         {
             string providerName = providerRepository.GetProvider(request.Domain);
 
+            Domain domain = await this.domainRepository.GetAsync(request.Domain.ToString());
+
+            if (domain == null)
+            {
+                domain = await this.repository.GetAsync(request.Domain.ToString().GetPuny(), providerName.GetPuny());
+                await this.domainRepository.CreateAsync(domain);
+            }
+
             return new GetWhoIsInformationResponse()
             {
-                Information =
-                    await this.repository.GetAsync(request.Domain.ToString().GetPuny(), providerName.GetPuny())
+                Information = domain
             };
         }
     }
