@@ -1,7 +1,7 @@
 version: '3.4'
 
 services:
-  logeecom.demoprojekat.pl:
+  rnids.whois.api:
     image: rnids/whois
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
