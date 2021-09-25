@@ -59,9 +59,9 @@ namespace RNIDS.WHOIS.TCP
             return keyValuePairs.Aggregate(new Dictionary<string, string>(), (dictionary, s) =>
             {
                 string[] keyValuePair = s.Split(":");
-                if (!dictionary.ContainsKey(keyValuePair[0]))
+                if (!dictionary.ContainsKey(keyValuePair[0].Trim()))
                 {
-                    dictionary.Add(keyValuePair[0], string.Join(":", keyValuePair[1..]));
+                    dictionary.Add(keyValuePair[0].Trim(), string.Join(":", keyValuePair[1..]).Trim());
                 }
 
                 return dictionary;
