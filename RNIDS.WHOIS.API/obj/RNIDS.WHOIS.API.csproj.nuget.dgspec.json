@@ -34,6 +34,9 @@
               },
               "/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.SerilogLogger/RNIDS.WHOIS.SerilogLogger.csproj": {
                 "projectPath": "/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.SerilogLogger/RNIDS.WHOIS.SerilogLogger.csproj"
+              },
+              "/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.TCP/RNIDS.WHOIS.TCP.csproj": {
+                "projectPath": "/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.TCP/RNIDS.WHOIS.TCP.csproj"
               }
             }
           }
@@ -103,7 +106,11 @@
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.Domain/RNIDS.WHOIS.Domain.csproj": {
+                "projectPath": "/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.Domain/RNIDS.WHOIS.Domain.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -121,6 +128,61 @@
               "version": "[13.0.1, )"
             }
           },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.400/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.Domain/RNIDS.WHOIS.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.Domain/RNIDS.WHOIS.Domain.csproj",
+        "projectName": "RNIDS.WHOIS.Domain",
+        "projectPath": "/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.Domain/RNIDS.WHOIS.Domain.csproj",
+        "packagesPath": "/Users/andrija/.nuget/packages/",
+        "outputPath": "/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.Domain/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/andrija/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
           "imports": [
             "net461",
             "net462",
@@ -190,6 +252,65 @@
               "version": "[3.9.3, )"
             }
           },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.400/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.TCP/RNIDS.WHOIS.TCP.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.TCP/RNIDS.WHOIS.TCP.csproj",
+        "projectName": "RNIDS.WHOIS.TCP",
+        "projectPath": "/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.TCP/RNIDS.WHOIS.TCP.csproj",
+        "packagesPath": "/Users/andrija/.nuget/packages/",
+        "outputPath": "/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.TCP/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/andrija/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.Application/RNIDS.WHOIS.Application.csproj": {
+                "projectPath": "/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.Application/RNIDS.WHOIS.Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
           "imports": [
             "net461",
             "net462",

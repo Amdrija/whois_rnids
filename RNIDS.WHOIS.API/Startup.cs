@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using RNIDS.WHOIS.Application.Base;
+using RNIDS.WHOIS.Application.Interfaces.Repositories;
 using RNIDS.WHOIS.Configuration;
 using RNIDS.WHOIS.SerilogLogger;
 
@@ -35,7 +36,8 @@ namespace RNIDS.WHOIS
 
             services.AddLogger(this.Configuration)
                 .AddUseCases()
-                .AddUseCaseLogger();
+                .AddUseCaseLogger()
+                .AddRepositories();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

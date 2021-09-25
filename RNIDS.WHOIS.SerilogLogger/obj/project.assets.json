@@ -98,13 +98,24 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
-          "Newtonsoft.Json": "13.0.1"
+          "Newtonsoft.Json": "13.0.1",
+          "RNIDS.WHOIS.Domain": "1.0.0"
         },
         "compile": {
           "bin/placeholder/RNIDS.WHOIS.Application.dll": {}
         },
         "runtime": {
           "bin/placeholder/RNIDS.WHOIS.Application.dll": {}
+        }
+      },
+      "RNIDS.WHOIS.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/RNIDS.WHOIS.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RNIDS.WHOIS.Domain.dll": {}
         }
       }
     }
@@ -305,6 +316,11 @@
       "type": "project",
       "path": "../RNIDS.WHOIS.Application/RNIDS.WHOIS.Application.csproj",
       "msbuildProject": "../RNIDS.WHOIS.Application/RNIDS.WHOIS.Application.csproj"
+    },
+    "RNIDS.WHOIS.Domain/1.0.0": {
+      "type": "project",
+      "path": "../RNIDS.WHOIS.Domain/RNIDS.WHOIS.Domain.csproj",
+      "msbuildProject": "../RNIDS.WHOIS.Domain/RNIDS.WHOIS.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {

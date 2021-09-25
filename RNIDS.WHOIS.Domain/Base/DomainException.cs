@@ -1,6 +1,6 @@
 namespace RNIDS.WHOIS.Domain.Base
 {
-    public class DomainException
+    public class DomainException : System.Exception
     {
         
     }

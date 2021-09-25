@@ -8,4 +8,12 @@
       <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\RNIDS.WHOIS.Domain\RNIDS.WHOIS.Domain.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Interfaces\Helpers" />
+    </ItemGroup>
+
 </Project>

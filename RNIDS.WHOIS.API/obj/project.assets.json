@@ -206,13 +206,24 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
-          "Newtonsoft.Json": "13.0.1"
+          "Newtonsoft.Json": "13.0.1",
+          "RNIDS.WHOIS.Domain": "1.0.0"
         },
         "compile": {
           "bin/placeholder/RNIDS.WHOIS.Application.dll": {}
         },
         "runtime": {
           "bin/placeholder/RNIDS.WHOIS.Application.dll": {}
+        }
+      },
+      "RNIDS.WHOIS.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/RNIDS.WHOIS.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RNIDS.WHOIS.Domain.dll": {}
         }
       },
       "RNIDS.WHOIS.SerilogLogger/1.0.0": {
@@ -228,6 +239,19 @@
         },
         "runtime": {
           "bin/placeholder/RNIDS.WHOIS.SerilogLogger.dll": {}
+        }
+      },
+      "RNIDS.WHOIS.TCP/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "RNIDS.WHOIS.Application": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RNIDS.WHOIS.TCP.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RNIDS.WHOIS.TCP.dll": {}
         }
       }
     }
@@ -600,16 +624,27 @@
       "path": "../RNIDS.WHOIS.Application/RNIDS.WHOIS.Application.csproj",
       "msbuildProject": "../RNIDS.WHOIS.Application/RNIDS.WHOIS.Application.csproj"
     },
+    "RNIDS.WHOIS.Domain/1.0.0": {
+      "type": "project",
+      "path": "../RNIDS.WHOIS.Domain/RNIDS.WHOIS.Domain.csproj",
+      "msbuildProject": "../RNIDS.WHOIS.Domain/RNIDS.WHOIS.Domain.csproj"
+    },
     "RNIDS.WHOIS.SerilogLogger/1.0.0": {
       "type": "project",
       "path": "../RNIDS.WHOIS.SerilogLogger/RNIDS.WHOIS.SerilogLogger.csproj",
       "msbuildProject": "../RNIDS.WHOIS.SerilogLogger/RNIDS.WHOIS.SerilogLogger.csproj"
+    },
+    "RNIDS.WHOIS.TCP/1.0.0": {
+      "type": "project",
+      "path": "../RNIDS.WHOIS.TCP/RNIDS.WHOIS.TCP.csproj",
+      "msbuildProject": "../RNIDS.WHOIS.TCP/RNIDS.WHOIS.TCP.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
       "RNIDS.WHOIS.Application >= 1.0.0",
       "RNIDS.WHOIS.SerilogLogger >= 1.0.0",
+      "RNIDS.WHOIS.TCP >= 1.0.0",
       "Scrutor >= 3.3.0",
       "Swashbuckle.AspNetCore >= 5.6.3"
     ]
@@ -648,6 +683,9 @@
             },
             "/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.SerilogLogger/RNIDS.WHOIS.SerilogLogger.csproj": {
               "projectPath": "/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.SerilogLogger/RNIDS.WHOIS.SerilogLogger.csproj"
+            },
+            "/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.TCP/RNIDS.WHOIS.TCP.csproj": {
+              "projectPath": "/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.TCP/RNIDS.WHOIS.TCP.csproj"
             }
           }
         }

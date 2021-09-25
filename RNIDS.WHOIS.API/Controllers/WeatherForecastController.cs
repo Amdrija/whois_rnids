@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using RNIDS.WHOIS.Application.Base;
 using RNIDS.WHOIS.Application.UseCases;
+using RNIDS.WHOIS.Application.UseCases.GetWhoIsInformation;
 
 namespace RNIDS.WHOIS.Controllers
 {
@@ -10,9 +11,9 @@ namespace RNIDS.WHOIS.Controllers
     public class WeatherForecastController : ControllerBase
     {
         [HttpGet]
-        public Task<TestResponse> Get(
-            [FromQuery] TestRequest request,
-            [FromServices] IUseCase<TestRequest, TestResponse> useCase)
+        public Task<GetWhoIsInformationResponse> Get(
+            [FromQuery] GetWhoIsInformationRequest request,
+            [FromServices] IUseCase<GetWhoIsInformationRequest, GetWhoIsInformationResponse> useCase)
         {
             return useCase.ExecuteAsync(request);
         }

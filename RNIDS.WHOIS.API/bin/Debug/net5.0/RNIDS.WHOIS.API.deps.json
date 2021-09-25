@@ -35,6 +35,7 @@
         "dependencies": {
           "RNIDS.WHOIS.Application": "1.0.0",
           "RNIDS.WHOIS.SerilogLogger": "1.0.0",
+          "RNIDS.WHOIS.TCP": "1.0.0",
           "Scrutor": "3.3.0",
           "Swashbuckle.AspNetCore": "5.6.3",
           "Microsoft.AspNetCore.Antiforgery": "5.0.0.0",
@@ -514,13 +515,22 @@
       "System.Text.Json/4.7.2": {},
       "RNIDS.WHOIS.Application/1.0.0": {
         "dependencies": {
-          "Newtonsoft.Json": "13.0.1"
+          "Newtonsoft.Json": "13.0.1",
+          "RNIDS.WHOIS.Domain": "1.0.0"
         },
         "runtime": {
           "RNIDS.WHOIS.Application.dll": {}
         },
         "compile": {
           "RNIDS.WHOIS.Application.dll": {}
+        }
+      },
+      "RNIDS.WHOIS.Domain/1.0.0": {
+        "runtime": {
+          "RNIDS.WHOIS.Domain.dll": {}
+        },
+        "compile": {
+          "RNIDS.WHOIS.Domain.dll": {}
         }
       },
       "RNIDS.WHOIS.SerilogLogger/1.0.0": {
@@ -534,6 +544,17 @@
         },
         "compile": {
           "RNIDS.WHOIS.SerilogLogger.dll": {}
+        }
+      },
+      "RNIDS.WHOIS.TCP/1.0.0": {
+        "dependencies": {
+          "RNIDS.WHOIS.Application": "1.0.0"
+        },
+        "runtime": {
+          "RNIDS.WHOIS.TCP.dll": {}
+        },
+        "compile": {
+          "RNIDS.WHOIS.TCP.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/5.0.0.0": {
@@ -2342,7 +2363,17 @@
       "serviceable": false,
       "sha512": ""
     },
+    "RNIDS.WHOIS.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "RNIDS.WHOIS.SerilogLogger/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "RNIDS.WHOIS.TCP/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

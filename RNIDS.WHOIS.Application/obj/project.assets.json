@@ -10,6 +10,16 @@
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
+      },
+      "RNIDS.WHOIS.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/RNIDS.WHOIS.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RNIDS.WHOIS.Domain.dll": {}
+        }
       }
     }
   },
@@ -40,11 +50,17 @@
         "newtonsoft.json.nuspec",
         "packageIcon.png"
       ]
+    },
+    "RNIDS.WHOIS.Domain/1.0.0": {
+      "type": "project",
+      "path": "../RNIDS.WHOIS.Domain/RNIDS.WHOIS.Domain.csproj",
+      "msbuildProject": "../RNIDS.WHOIS.Domain/RNIDS.WHOIS.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "Newtonsoft.Json >= 13.0.1"
+      "Newtonsoft.Json >= 13.0.1",
+      "RNIDS.WHOIS.Domain >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -75,7 +91,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.Domain/RNIDS.WHOIS.Domain.csproj": {
+              "projectPath": "/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.Domain/RNIDS.WHOIS.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
