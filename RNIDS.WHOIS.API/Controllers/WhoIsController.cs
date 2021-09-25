@@ -8,7 +8,7 @@ namespace RNIDS.WHOIS.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class WeatherForecastController : ControllerBase
+    public class WhoIsController : ControllerBase
     {
         [HttpGet]
         public Task<GetWhoIsInformationResponse> Get(
