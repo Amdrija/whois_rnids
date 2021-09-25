@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "IThDsfEIjdPNQS8jLA7iF2rDpBEocbWy/TgTeZfMygeqVpFooMK0aGofIKYNE0w8I2UR67100QTTvomPrlIH3w==",
+  "success": true,
+  "projectFilePath": "/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.SerilogLogger/RNIDS.WHOIS.SerilogLogger.csproj",
+  "expectedPackageFiles": [
+    "/Users/andrija/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/6.0.0-rc.1.21451.13/microsoft.extensions.dependencyinjection.abstractions.6.0.0-rc.1.21451.13.nupkg.sha512",
+    "/Users/andrija/.nuget/packages/microsoft.extensions.options/6.0.0-rc.1.21451.13/microsoft.extensions.options.6.0.0-rc.1.21451.13.nupkg.sha512",
+    "/Users/andrija/.nuget/packages/microsoft.extensions.primitives/6.0.0-rc.1.21451.13/microsoft.extensions.primitives.6.0.0-rc.1.21451.13.nupkg.sha512",
+    "/Users/andrija/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
+    "/Users/andrija/.nuget/packages/sentry/3.9.3/sentry.3.9.3.nupkg.sha512",
+    "/Users/andrija/.nuget/packages/sentry.serilog/3.9.3/sentry.serilog.3.9.3.nupkg.sha512",
+    "/Users/andrija/.nuget/packages/serilog/2.10.0/serilog.2.10.0.nupkg.sha512",
+    "/Users/andrija/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0-rc.1.21451.13/system.runtime.compilerservices.unsafe.6.0.0-rc.1.21451.13.nupkg.sha512"
+  ],
+  "logs": []
+}

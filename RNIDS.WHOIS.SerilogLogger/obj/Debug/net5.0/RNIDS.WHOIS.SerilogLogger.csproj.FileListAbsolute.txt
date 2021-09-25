@@ -1,0 +1,15 @@
+/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.SerilogLogger/bin/Debug/net5.0/RNIDS.WHOIS.SerilogLogger.deps.json
+/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.SerilogLogger/bin/Debug/net5.0/RNIDS.WHOIS.SerilogLogger.dll
+/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.SerilogLogger/bin/Debug/net5.0/ref/RNIDS.WHOIS.SerilogLogger.dll
+/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.SerilogLogger/bin/Debug/net5.0/RNIDS.WHOIS.SerilogLogger.pdb
+/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.SerilogLogger/bin/Debug/net5.0/RNIDS.WHOIS.Application.dll
+/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.SerilogLogger/bin/Debug/net5.0/RNIDS.WHOIS.Application.pdb
+/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.SerilogLogger/obj/Debug/net5.0/RNIDS.WHOIS.SerilogLogger.csproj.AssemblyReference.cache
+/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.SerilogLogger/obj/Debug/net5.0/RNIDS.WHOIS.SerilogLogger.GeneratedMSBuildEditorConfig.editorconfig
+/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.SerilogLogger/obj/Debug/net5.0/RNIDS.WHOIS.SerilogLogger.AssemblyInfoInputs.cache
+/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.SerilogLogger/obj/Debug/net5.0/RNIDS.WHOIS.SerilogLogger.AssemblyInfo.cs
+/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.SerilogLogger/obj/Debug/net5.0/RNIDS.WHOIS.SerilogLogger.csproj.CoreCompileInputs.cache
+/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.SerilogLogger/obj/Debug/net5.0/RNIDS.WHOIS.SerilogLogger.csproj.CopyComplete
+/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.SerilogLogger/obj/Debug/net5.0/RNIDS.WHOIS.SerilogLogger.dll
+/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.SerilogLogger/obj/Debug/net5.0/ref/RNIDS.WHOIS.SerilogLogger.dll
+/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.SerilogLogger/obj/Debug/net5.0/RNIDS.WHOIS.SerilogLogger.pdb

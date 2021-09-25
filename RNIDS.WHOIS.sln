@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RNIDS.WHOIS.API", "RNIDS.WHOIS.API\RNIDS.WHOIS.API.csproj", "{6945810D-288E-4FDA-ABDC-9C2350F4F5C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RNIDS.WHOIS.Domain", "RNIDS.WHOIS.Domain\RNIDS.WHOIS.Domain.csproj", "{4608E667-3A23-45EC-89EC-CE3E8B470F84}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RNIDS.WHOIS.Application", "RNIDS.WHOIS.Application\RNIDS.WHOIS.Application.csproj", "{AD0BF48F-CB58-4C0C-AD7C-B20A979B993E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{7F615E40-4285-46C2-820E-BD1C72F7D8A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RNIDS.WHOIS.SerilogLogger", "RNIDS.WHOIS.SerilogLogger\RNIDS.WHOIS.SerilogLogger.csproj", "{2B6D0C6C-4D2C-48C4-BA3E-CAE3AA5C3FF5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6945810D-288E-4FDA-ABDC-9C2350F4F5C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6945810D-288E-4FDA-ABDC-9C2350F4F5C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6945810D-288E-4FDA-ABDC-9C2350F4F5C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6945810D-288E-4FDA-ABDC-9C2350F4F5C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4608E667-3A23-45EC-89EC-CE3E8B470F84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4608E667-3A23-45EC-89EC-CE3E8B470F84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4608E667-3A23-45EC-89EC-CE3E8B470F84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4608E667-3A23-45EC-89EC-CE3E8B470F84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD0BF48F-CB58-4C0C-AD7C-B20A979B993E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD0BF48F-CB58-4C0C-AD7C-B20A979B993E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD0BF48F-CB58-4C0C-AD7C-B20A979B993E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD0BF48F-CB58-4C0C-AD7C-B20A979B993E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B6D0C6C-4D2C-48C4-BA3E-CAE3AA5C3FF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B6D0C6C-4D2C-48C4-BA3E-CAE3AA5C3FF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B6D0C6C-4D2C-48C4-BA3E-CAE3AA5C3FF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B6D0C6C-4D2C-48C4-BA3E-CAE3AA5C3FF5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2B6D0C6C-4D2C-48C4-BA3E-CAE3AA5C3FF5} = {7F615E40-4285-46C2-820E-BD1C72F7D8A7}
+	EndGlobalSection
+EndGlobal

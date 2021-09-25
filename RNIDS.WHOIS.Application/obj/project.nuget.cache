@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "AnRpaKR4QMhbxjMpyrQo527OPueELrTLto/+hYHTysJFC2YKu4xIazNwxuxzX3RLhaVkHzNGLUWzgf+c3eeP4g==",
+  "success": true,
+  "projectFilePath": "/Users/andrija/Documents/Programiranje/C#/RNIDS.WHOIS/RNIDS.WHOIS/RNIDS.WHOIS.Application/RNIDS.WHOIS.Application.csproj",
+  "expectedPackageFiles": [
+    "/Users/andrija/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
