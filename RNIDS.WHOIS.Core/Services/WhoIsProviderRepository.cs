@@ -25,7 +25,7 @@ namespace RNIDS.WHOIS.Core.Services
                 {".ком", WhoIsProviders.NIC_KOM},
                 {".net", WhoIsProviders.VERISIGN_GRS},
                 {".uk", WhoIsProviders.NIC_UK},
-                {".se ",WhoIsProviders.IIS}
+                {".se",WhoIsProviders.IIS}
             };
         }
 

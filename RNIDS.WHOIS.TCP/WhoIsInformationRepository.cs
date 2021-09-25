@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using RNIDS.WHOIS.Application.Interfaces.Repositories;
 using RNIDS.WHOIS.Core.Models;
+using RNIDS.WHOIS.TCP.Helpers;
 using RNIDS.WHOIS.TCP.WhoIsInformationConversion;
 
 namespace RNIDS.WHOIS.TCP
@@ -29,43 +30,24 @@ namespace RNIDS.WHOIS.TCP
                 await tcpClient.ConnectAsync(whoisProvider, 43);
                 using (NetworkStream networkStream = tcpClient.GetStream())
                 {
-                    BufferedStream bufferedStream = new BufferedStream(networkStream);
-                    StreamWriter streamWriter = new StreamWriter(bufferedStream);
+                    StreamWriter streamWriter = new StreamWriter(networkStream);
 
                     await streamWriter.WriteLineAsync(domainName);
-                    await streamWriter.FlushAsync();
+                    streamWriter.Flush();
                     
-                    StreamReader streamReaderReceive = new StreamReader(bufferedStream);
+                    StreamReader streamReaderReceive = new StreamReader(networkStream);
 
                     while (!streamReaderReceive.EndOfStream)
                         responseBuilder.AppendLine(await streamReaderReceive.ReadLineAsync());
                     
                     streamWriter.Close();
-                    bufferedStream.Close();
                 }
             }
 
             string response = responseBuilder.ToString();
-            Dictionary<string, string> whoIsDictionary = this.GetWhoIsDictionary(response);
+            Dictionary<string, string> whoIsDictionary = WhoIsResponseParser.GetWhoIsDictionary(response);
             
             return this.factory.Create(whoisProvider).Convert(whoIsDictionary, response);
-        }
-
-        private Dictionary<string, string> GetWhoIsDictionary(string response)
-        {
-            string parsedResponse = response.Replace(":" + Environment.NewLine, ":");
-            
-            IEnumerable<string> keyValuePairs = parsedResponse.Split(Environment.NewLine).Where(s => s.Contains(":"));
-            return keyValuePairs.Aggregate(new Dictionary<string, string>(), (dictionary, s) =>
-            {
-                string[] keyValuePair = s.Split(":");
-                if (!dictionary.ContainsKey(keyValuePair[0].Trim()))
-                {
-                    dictionary.Add(keyValuePair[0].Trim(), string.Join(":", keyValuePair[1..]).Trim());
-                }
-
-                return dictionary;
-            });
         }
     }
 }
