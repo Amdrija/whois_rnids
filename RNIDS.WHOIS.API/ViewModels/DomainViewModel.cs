@@ -13,9 +13,9 @@ namespace RNIDS.WHOIS.ViewModels
         
         public double CreatedDateInMiliseconds { get; init; }
         
-        public double UpdatedDateInMiliseconds { get; init; }
+        public double? UpdatedDateInMiliseconds { get; init; }
         
-        public double ExpirationDateInMiliseconds { get; init; }
+        public double? ExpirationDateInMiliseconds { get; init; }
         
         public string NameServers { get; init; }
         
@@ -45,9 +45,9 @@ namespace RNIDS.WHOIS.ViewModels
             this.Name = domain.Name;
             this.CreatedDateInMiliseconds = domain.CreatedDate.ToUniversalTime().Subtract(utc)
                 .TotalMilliseconds;
-            this.UpdatedDateInMiliseconds = domain.UpdatedDate.ToUniversalTime().Subtract(utc)
+            this.UpdatedDateInMiliseconds = domain.UpdatedDate?.ToUniversalTime().Subtract(utc)
                 .TotalMilliseconds;
-            this.ExpirationDateInMiliseconds = domain.ExpirationDate.ToUniversalTime().Subtract(utc)
+            this.ExpirationDateInMiliseconds = domain.ExpirationDate?.ToUniversalTime().Subtract(utc)
                 .TotalMilliseconds;
             this.NameServers = domain.NameServers;
             this.Address = domain.Address;

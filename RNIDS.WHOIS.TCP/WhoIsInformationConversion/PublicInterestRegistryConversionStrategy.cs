@@ -7,8 +7,16 @@ namespace RNIDS.WHOIS.TCP.WhoIsInformationConversion
 {
     public class PublicInterestRegistryConversionStrategy : IWhoIsInformationConversionStrategy
     {
-        public Domain Convert(string whoIsResponseText)
+        public Domain Convert(string whoIsResponseText, string domainName)
         {
+            if (whoIsResponseText.Contains("NOT FOUND"))
+            {
+                return new Domain()
+                {
+                    Name = domainName
+                };
+            }
+            
             Dictionary<string, string> whoIsResponse = WhoIsResponseParser.GetWhoIsDictionary(whoIsResponseText);
             
             return new Domain()

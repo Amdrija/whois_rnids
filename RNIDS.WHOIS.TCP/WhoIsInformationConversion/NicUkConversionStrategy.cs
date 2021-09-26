@@ -8,8 +8,16 @@ namespace RNIDS.WHOIS.TCP.WhoIsInformationConversion
 {
     public class NicUkConversionStrategy : IWhoIsInformationConversionStrategy
     {
-        public Domain Convert(string whoIsResponseText)
+        public Domain Convert(string whoIsResponseText, string domainName)
         {
+            if (whoIsResponseText.Contains("This domain name has not been registered"))
+            {
+                return new Domain()
+                {
+                    Name = domainName
+                };
+            }
+            
             Dictionary<string, string> whoIsResponse =
                 WhoIsResponseParser.GetWhoIsDictionary(whoIsResponseText, ":\r\n", "\r\n\r\n");
             Dictionary<string,string> timeDictionary = WhoIsResponseParser.GetWhoIsDictionary(whoIsResponse["Relevant dates"]);

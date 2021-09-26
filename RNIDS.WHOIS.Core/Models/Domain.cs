@@ -12,9 +12,9 @@ namespace RNIDS.WHOIS.Core.Models
         
         public DateTime CreatedDate { get; init; }
         
-        public DateTime UpdatedDate { get; init; }
+        public DateTime? UpdatedDate { get; init; }
         
-        public DateTime ExpirationDate { get; init; }
+        public DateTime? ExpirationDate { get; init; }
         
         public string NameServers { get; init; }
         

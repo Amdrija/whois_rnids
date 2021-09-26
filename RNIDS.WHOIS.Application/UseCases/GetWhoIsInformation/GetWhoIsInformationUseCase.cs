@@ -30,7 +30,7 @@ namespace RNIDS.WHOIS.Application.UseCases.GetWhoIsInformation
 
             if (domain == null)
             {
-                domain = await this.repository.GetAsync(request.Domain.ToString().ToLower().GetPuny(), providerName.GetPuny());
+                domain = await this.repository.GetAsync(request.Domain.ToString().ToLower(), providerName);
                 await this.domainRepository.CreateAsync(domain);
             }
 
