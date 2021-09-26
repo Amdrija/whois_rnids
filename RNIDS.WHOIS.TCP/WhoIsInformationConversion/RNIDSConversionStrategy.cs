@@ -1,20 +1,24 @@
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using RNIDS.WHOIS.Core.Models;
+using RNIDS.WHOIS.TCP.Helpers;
 
 namespace RNIDS.WHOIS.TCP.WhoIsInformationConversion
 {
     public class RnidsConversionStrategy : IWhoIsInformationConversionStrategy
     {
-        public Domain Convert(Dictionary<string, string> whoIsResponse, string whoIsResponseText)
+        public Domain Convert(string whoIsResponseText)
         {
+            Dictionary<string, string> whoIsResponse = WhoIsResponseParser.GetWhoIsDictionary(whoIsResponseText);
+            
             return new Domain()
             {
                 Name = whoIsResponse["Domain name"],
                 DomainId = whoIsResponse["ID Number"],
-                UpdatedDate = DateTime.Parse(whoIsResponse["Modification date"]),
-                CreatedDate = DateTime.Parse(whoIsResponse["Registration date"]),
-                ExpirationDate = DateTime.Parse(whoIsResponse["Expiration date"]),
+                UpdatedDate = DateTime.ParseExact(whoIsResponse["Modification date"], "dd.MM.yyyy HH:mm:ss", CultureInfo.InvariantCulture),
+                CreatedDate = DateTime.ParseExact(whoIsResponse["Registration date"], "dd.MM.yyyy HH:mm:ss", CultureInfo.InvariantCulture),
+                ExpirationDate = DateTime.ParseExact(whoIsResponse["Expiration date"], "dd.MM.yyyy HH:mm:ss", CultureInfo.InvariantCulture),
                 Address = whoIsResponse["Address"],
                 PostalCode = whoIsResponse["Postal Code"],
                 NameServers = whoIsResponse["DNS"],

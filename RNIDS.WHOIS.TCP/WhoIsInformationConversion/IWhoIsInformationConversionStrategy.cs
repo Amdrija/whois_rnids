@@ -5,6 +5,6 @@ namespace RNIDS.WHOIS.TCP.WhoIsInformationConversion
 {
     public interface IWhoIsInformationConversionStrategy
     {
-        public Domain Convert(Dictionary<string, string> whoIsResponse, string whoIsResponseText);
+        public Domain Convert(string whoIsResponseText);
     }
 }

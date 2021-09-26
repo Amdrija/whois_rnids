@@ -15,6 +15,7 @@ namespace RNIDS.WHOIS.TCP
     public class WhoIsInformationRepository : IWhoIsInformationRepository
     {
         private readonly WhoIsConversionStrategyFactory factory;
+        private const int BUFFER_SIZE = 2048;
 
         public WhoIsInformationRepository(WhoIsConversionStrategyFactory factory)
         {
@@ -28,26 +29,26 @@ namespace RNIDS.WHOIS.TCP
             using (TcpClient tcpClient = new TcpClient())
             {
                 await tcpClient.ConnectAsync(whoisProvider, 43);
-                using (NetworkStream networkStream = tcpClient.GetStream())
+                await using (NetworkStream networkStream = tcpClient.GetStream())
                 {
-                    StreamWriter streamWriter = new StreamWriter(networkStream);
+                    Byte[] payload = Encoding.ASCII.GetBytes(domainName + "\r\n");
+                    await networkStream.WriteAsync(payload, 0, payload.Length);
+                    await networkStream.FlushAsync();
 
-                    await streamWriter.WriteLineAsync(domainName);
-                    streamWriter.Flush();
-                    
-                    StreamReader streamReaderReceive = new StreamReader(networkStream);
+                    int bytesRead = 0;
+                    do
+                    {
+                        byte[] bytes = new byte[BUFFER_SIZE];
 
-                    while (!streamReaderReceive.EndOfStream)
-                        responseBuilder.AppendLine(await streamReaderReceive.ReadLineAsync());
-                    
-                    streamWriter.Close();
+                        bytesRead = await networkStream.ReadAsync(bytes, 0, (int) BUFFER_SIZE);
+                        responseBuilder.Append(Encoding.UTF8.GetString(bytes[..(bytesRead - 1)]));
+                    } while (bytesRead == BUFFER_SIZE);
                 }
             }
 
             string response = responseBuilder.ToString();
-            Dictionary<string, string> whoIsDictionary = WhoIsResponseParser.GetWhoIsDictionary(response);
             
-            return this.factory.Create(whoisProvider).Convert(whoIsDictionary, response);
+            return this.factory.Create(whoisProvider).Convert(response);
         }
     }
 }

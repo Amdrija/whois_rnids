@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using RNIDS.WHOIS.Application.Base;
 using RNIDS.WHOIS.Application.UseCases;
 using RNIDS.WHOIS.Application.UseCases.GetWhoIsInformation;
+using RNIDS.WHOIS.ViewModels;
 
 namespace RNIDS.WHOIS.Controllers
 {
@@ -11,11 +12,12 @@ namespace RNIDS.WHOIS.Controllers
     public class WhoIsController : ControllerBase
     {
         [HttpGet]
-        public Task<GetWhoIsInformationResponse> Get(
+        public async Task<DomainViewModel> Get(
             [FromQuery] GetWhoIsInformationRequest request,
             [FromServices] IUseCase<GetWhoIsInformationRequest, GetWhoIsInformationResponse> useCase)
         {
-            return useCase.ExecuteAsync(request);
+            GetWhoIsInformationResponse response = await useCase.ExecuteAsync(request);
+            return new DomainViewModel(response.Information);
         }
     }
 }
