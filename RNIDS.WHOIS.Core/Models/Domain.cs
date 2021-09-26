@@ -10,7 +10,7 @@ namespace RNIDS.WHOIS.Core.Models
         
         public string Name { get; init; }
         
-        public DateTime CreatedDate { get; init; }
+        public DateTime? CreatedDate { get; init; }
         
         public DateTime? UpdatedDate { get; init; }
         

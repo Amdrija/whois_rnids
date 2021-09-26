@@ -11,7 +11,7 @@ namespace RNIDS.WHOIS.ViewModels
         
         public string Name { get; init; }
         
-        public double CreatedDateInMiliseconds { get; init; }
+        public double? CreatedDateInMiliseconds { get; init; }
         
         public double? UpdatedDateInMiliseconds { get; init; }
         
@@ -43,7 +43,7 @@ namespace RNIDS.WHOIS.ViewModels
             this.Id = domain.Id;
             this.DomainId = domain.DomainId;
             this.Name = domain.Name;
-            this.CreatedDateInMiliseconds = domain.CreatedDate.ToUniversalTime().Subtract(utc)
+            this.CreatedDateInMiliseconds = domain.CreatedDate?.ToUniversalTime().Subtract(utc)
                 .TotalMilliseconds;
             this.UpdatedDateInMiliseconds = domain.UpdatedDate?.ToUniversalTime().Subtract(utc)
                 .TotalMilliseconds;

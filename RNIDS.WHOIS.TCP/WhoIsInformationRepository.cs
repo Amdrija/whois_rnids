@@ -51,7 +51,7 @@ namespace RNIDS.WHOIS.TCP
 
             string response = responseBuilder.ToString();
             
-            return this.factory.Create(whoisProvider).Convert(response, punyDomain);
+            return this.factory.Create(whoisProvider).Convert(response, domainName);
         }
     }
 }

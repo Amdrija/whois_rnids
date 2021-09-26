@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using RNIDS.WHOIS.Core.Models;
 
@@ -12,5 +13,9 @@ namespace RNIDS.WHOIS.Application.Interfaces.Repositories
         public Task DeleteAsync(Domain domain);
 
         public Task UpdateAsync(Domain domain);
+
+        public Task<List<Domain>> GetPopularAsync();
+
+        public Task<Domain> GetRandomAsync();
     }
 }

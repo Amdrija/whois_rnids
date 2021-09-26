@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 using RNIDS.WHOIS.Application.Interfaces.Repositories;
 using RNIDS.WHOIS.Core.Models;
 using RNIDS.WHOIS.MongoDB.Options;
+using MongoDB.Driver.Linq;
 
 namespace RNIDS.WHOIS.MongoDB
 {
@@ -36,6 +38,16 @@ namespace RNIDS.WHOIS.MongoDB
         public Task UpdateAsync(Domain domain)
         {
             return this.collection.ReplaceOneAsync(d => d.Id == domain.Id, domain);
+        }
+
+        public Task<List<Domain>> GetPopularAsync()
+        {
+            return this.collection.AsQueryable<Domain>().OrderByDescending(d => d.SearchCount).Take(5).ToListAsync();
+        }
+
+        public Task<Domain> GetRandomAsync()
+        {
+            return this.collection.AsQueryable<Domain>().Where(d => d.ExpirationDate == null).Sample(1).FirstOrDefaultAsync();
         }
     }
 }
