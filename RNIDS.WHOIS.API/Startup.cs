@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using FluentValidation.AspNetCore;
 using Hangfire;
 using Hangfire.Mongo;
 using Hangfire.Mongo.Migration.Strategies;
@@ -21,6 +22,7 @@ using RNIDS.WHOIS.Configuration;
 using RNIDS.WHOIS.MongoDB.Options;
 using RNIDS.WHOIS.Options;
 using RNIDS.WHOIS.SerilogLogger;
+using RNIDS.WHOIS.Validators;
 using RNIDS.WHOIS.Workers;
 
 namespace RNIDS.WHOIS
@@ -38,7 +40,7 @@ namespace RNIDS.WHOIS
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            services.AddControllers().AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<CreateEmailSenderRequestValidator>());
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo {Title = "RNIDS.WHOIS.API", Version = "v1"});

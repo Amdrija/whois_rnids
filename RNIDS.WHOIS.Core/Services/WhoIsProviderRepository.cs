@@ -29,10 +29,8 @@ namespace RNIDS.WHOIS.Core.Services
             };
         }
 
-        public string GetProvider(Uri uri)
+        public string GetProvider(string domain)
         {
-            string domain = uri.ToString();
-
             int position = domain.LastIndexOf(".", StringComparison.Ordinal);
 
             if (position == -1)

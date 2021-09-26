@@ -6,6 +6,6 @@ namespace RNIDS.WHOIS.Application.UseCases.CreateEmailReminder
     {
         public string Email { get; init; }
         
-        public Uri DomainName { get; init; }
+        public string DomainName { get; init; }
     }
 }

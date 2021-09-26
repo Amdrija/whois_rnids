@@ -26,7 +26,7 @@ namespace RNIDS.WHOIS.Application.UseCases.GetWhoIsInformation
         {
             string providerName = providerRepository.GetProvider(request.Domain);
 
-            Domain domain = await this.domainRepository.GetAsync(request.Domain.ToString().ToLower());
+            Domain domain = await this.domainRepository.GetAsync(request.Domain.ToLower());
 
             if (domain != null)
             {
@@ -35,7 +35,7 @@ namespace RNIDS.WHOIS.Application.UseCases.GetWhoIsInformation
             }
             else
             {
-                domain = await this.repository.GetAsync(request.Domain.ToString().ToLower(), providerName);
+                domain = await this.repository.GetAsync(request.Domain.ToLower(), providerName);
                 await this.domainRepository.CreateAsync(domain);
             }
 

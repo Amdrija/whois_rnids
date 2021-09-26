@@ -26,7 +26,7 @@ namespace RNIDS.WHOIS.Application.UseCases.CreateEmailReminder
         public async Task ExecuteAsync(CreateEmailReminderRequest request)
         {
             Domain domain = await this.whoIsInformationRepository.GetAsync(
-                request.DomainName.ToString().ToLower(),
+                request.DomainName.ToLower(),
                 whoIsProviderRepository.GetProvider(request.DomainName));
 
             //TODO: Remove in production, this is for demonstration puproses
