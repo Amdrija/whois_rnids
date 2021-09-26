@@ -28,7 +28,12 @@ namespace RNIDS.WHOIS.Application.UseCases.GetWhoIsInformation
 
             Domain domain = await this.domainRepository.GetAsync(request.Domain.ToString().ToLower());
 
-            if (domain == null)
+            if (domain != null)
+            {
+                domain.IncrementSearch();
+                await this.domainRepository.UpdateAsync(domain);
+            }
+            else
             {
                 domain = await this.repository.GetAsync(request.Domain.ToString().ToLower(), providerName);
                 await this.domainRepository.CreateAsync(domain);

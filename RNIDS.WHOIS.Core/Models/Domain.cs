@@ -35,10 +35,18 @@ namespace RNIDS.WHOIS.Core.Models
         public string RegistrantName { get; init; }
         
         public string WhoIsResponse { get; init; }
+        
+        public int SearchCount { get; private set; }
 
         public Domain()
         {
             Id = Guid.NewGuid();
+            SearchCount = 1;
+        }
+
+        public void IncrementSearch()
+        {
+            this.SearchCount++;
         }
     }
 }
