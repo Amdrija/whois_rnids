@@ -51,10 +51,12 @@ namespace RNIDS.WHOIS.Services
         {
             MailAddress from = new MailAddress(options.Email, options.DisplayName, Encoding.UTF8);
             MailAddress to = new MailAddress(email);
-    
+
+            
+            
             MailMessage message = new MailMessage(from, to)
             {
-                Body = $"We are reminding you that the domain {domainName} is expiring soon.",
+                Body = emailTemplate.emailReminderTemplate.Replace("{{domainName}}", domainName),
                 BodyEncoding = Encoding.UTF8,
     
                 Subject = "Domain Expiration Reminder",
