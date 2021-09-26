@@ -2,3 +2,8 @@
 **/obj
 **/.DS_Store
 /db
+
+/RNIDS.WHOIS.API/appsettings.json
+/RNIDS.WHOIS.API/appsettings.Development.json
+**/appsettings.json
+**/appsettings.Development.json
