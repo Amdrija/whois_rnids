@@ -10,7 +10,7 @@ namespace RNIDS.WHOIS.Application.Interfaces.Repositories
 
         public Task CreateAsync(Domain domain);
 
-        public Task DeleteAsync(Domain domain);
+        public Task ClearOldAsync(int beforeDays);
 
         public Task UpdateAsync(Domain domain);
 

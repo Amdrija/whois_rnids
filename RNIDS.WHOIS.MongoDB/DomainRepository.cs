@@ -14,7 +14,9 @@ namespace RNIDS.WHOIS.MongoDB
     {
         private readonly IMongoCollection<Domain> collection;
 
-        public DomainRepository(MongoClient client, IOptions<MongoDbOptions> options)
+        public DomainRepository(
+            MongoClient client,
+            IOptions<MongoDbOptions> options)
         {
             this.collection = client.GetDatabase(options.Value.DatabaseName)
                 .GetCollection<Domain>(options.Value.CollectionName);
@@ -30,9 +32,10 @@ namespace RNIDS.WHOIS.MongoDB
             return this.collection.InsertOneAsync(domain);
         }
 
-        public Task DeleteAsync(Domain domain)
+        public Task ClearOldAsync(int beforeDays)
         {
-            return this.collection.DeleteOneAsync(d => d.Id == domain.Id);
+            return this.collection.DeleteManyAsync(d =>
+                d.SearchedOn < DateTime.Now.AddDays(-beforeDays));
         }
 
         public Task UpdateAsync(Domain domain)

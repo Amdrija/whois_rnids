@@ -1,6 +1,6 @@
 using Microsoft.Extensions.DependencyInjection;
 using RNIDS.WHOIS.Application.Base;
-using RNIDS.WHOIS.Application.UseCases;
+using RNIDS.WHOIS.Application.UseCases.GetWhoIsInformation;
 
 namespace RNIDS.WHOIS.Configuration
 {
@@ -9,7 +9,7 @@ namespace RNIDS.WHOIS.Configuration
         public static IServiceCollection AddUseCases(this IServiceCollection services)
         {
             services.Scan(scan => scan
-                .FromAssemblyOf<TestUseCase>()
+                .FromAssemblyOf<GetWhoIsInformationUseCase>()
                 .AddClasses(classes => classes.Where(type => type.Namespace.StartsWith("RNIDS.WHOIS.Application.UseCases")))
                 .AsImplementedInterfaces()
                 .WithTransientLifetime());

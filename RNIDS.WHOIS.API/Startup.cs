@@ -18,7 +18,10 @@ using Quartz;
 using RNIDS.WHOIS.Application.Base;
 using RNIDS.WHOIS.Application.Interfaces.Repositories;
 using RNIDS.WHOIS.Configuration;
+using RNIDS.WHOIS.MongoDB.Options;
+using RNIDS.WHOIS.Options;
 using RNIDS.WHOIS.SerilogLogger;
+using RNIDS.WHOIS.Workers;
 
 namespace RNIDS.WHOIS
 {
@@ -62,13 +65,16 @@ namespace RNIDS.WHOIS
                     }));
             
             services.AddHangfireServer();
+
+            services.Configure<DomainCleanerOptions>(options =>
+                this.Configuration.GetSection("DomainCleaner").Bind(options));
+
+            services.AddHostedService<DomainCleaner>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IBackgroundJobClient client)
         {
             app.UseHangfireDashboard();
-            client.Schedule(() => Console.WriteLine(DateTime.Now), DateTime.Now + TimeSpan.FromSeconds(5));
-            client.Enqueue(() => Console.WriteLine("Hello"));
             
             if (env.IsDevelopment())
             {
