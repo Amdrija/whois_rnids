@@ -37,16 +37,27 @@ namespace RNIDS.WHOIS.Core.Models
         public string WhoIsResponse { get; init; }
         
         public int SearchCount { get; private set; }
+        
+        public DateTime SearchedOn { get; private set; }
+
+        private const int SOON_EXPIRING_DAYS = 1;
 
         public Domain()
         {
-            Id = Guid.NewGuid();
-            SearchCount = 1;
+            this.Id = Guid.NewGuid();
+            this.SearchCount = 1;
+            this.SearchedOn = DateTime.Now;
         }
 
         public void IncrementSearch()
         {
             this.SearchCount++;
+            this.SearchedOn = DateTime.Now;
+        }
+
+        public bool IsExpiringSoon()
+        {
+            return this.ExpirationDate == null || this.ExpirationDate?.Subtract(DateTime.Now).TotalDays <= 1;
         }
     }
 }

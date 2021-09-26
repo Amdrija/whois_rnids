@@ -1,0 +1,11 @@
+﻿{
+  "profiles": {
+    "RNIDS.WHOIS.JobScheduler": {
+      "commandName": "Project",
+      "dotnetRunMessages": "true",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

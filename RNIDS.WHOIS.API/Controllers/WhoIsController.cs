@@ -4,7 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using RNIDS.WHOIS.Application.Base;
+using RNIDS.WHOIS.Application.Interfaces.Services;
 using RNIDS.WHOIS.Application.UseCases;
+using RNIDS.WHOIS.Application.UseCases.CreateEmailReminder;
 using RNIDS.WHOIS.Application.UseCases.GetPopularDomains;
 using RNIDS.WHOIS.Application.UseCases.GetRandomDomain;
 using RNIDS.WHOIS.Application.UseCases.GetWhoIsInformation;
@@ -39,6 +41,14 @@ namespace RNIDS.WHOIS.Controllers
         {
             GetPopularDomainsResponse response = await useCase.ExecuteAsync(new());
             return response.Domains.Select(d => new DomainViewModel(d));
+        }
+
+        [HttpGet("email")]
+        public Task SendEmail(
+            [FromQuery] CreateEmailReminderRequest request,
+            [FromServices] IUseCase<CreateEmailReminderRequest> useCase)
+        {
+            return useCase.ExecuteAsync(request);
         }
     }
 }
