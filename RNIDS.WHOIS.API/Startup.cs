@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 using FluentValidation.AspNetCore;
 using Hangfire;
@@ -8,7 +9,9 @@ using Hangfire.Mongo;
 using Hangfire.Mongo.Migration.Strategies;
 using Hangfire.Mongo.Migration.Strategies.Backup;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -19,6 +22,7 @@ using Quartz;
 using RNIDS.WHOIS.Application.Base;
 using RNIDS.WHOIS.Application.Interfaces.Repositories;
 using RNIDS.WHOIS.Configuration;
+using RNIDS.WHOIS.Core.Base;
 using RNIDS.WHOIS.MongoDB.Options;
 using RNIDS.WHOIS.Options;
 using RNIDS.WHOIS.SerilogLogger;
@@ -85,6 +89,19 @@ namespace RNIDS.WHOIS
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "RNIDS.WHOIS.API v1"));
             }
 
+            app.UseExceptionHandler(a => a.Run(async context =>
+            {
+                var exceptionHandlerPathFeature = context.Features.Get<IExceptionHandlerPathFeature>();
+                var exception = exceptionHandlerPathFeature.Error;
+
+                if (exception is CoreException or ApplicationException)
+                {
+                    context.Response.StatusCode = 400;
+                }
+                
+                await context.Response.WriteAsJsonAsync(new { error = exception.Message });
+            }));
+            
             //app.UseHttpsRedirection();
 
             app.UseRouting();

@@ -33,7 +33,7 @@ namespace RNIDS.WHOIS.Core.Services
         {
             int position = domain.LastIndexOf(".", StringComparison.Ordinal);
 
-            if (position == -1)
+            if (position == -1 || !whoIsProviders.ContainsKey(domain.Substring(position)))
             {
                 throw new InvalidDomainException();
             }
