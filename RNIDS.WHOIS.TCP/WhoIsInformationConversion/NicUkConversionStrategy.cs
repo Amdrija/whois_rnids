@@ -15,7 +15,7 @@ namespace RNIDS.WHOIS.TCP.WhoIsInformationConversion
             Dictionary<string,string> timeDictionary = WhoIsResponseParser.GetWhoIsDictionary(whoIsResponse["Relevant dates"]);
             return new Domain()
             {
-                Name = whoIsResponse["Domain name"],
+                Name = whoIsResponse["Domain name"].ToLower(),
                 UpdatedDate = DateTime.ParseExact(timeDictionary["Last updated"], "dd-MMM-yyyy", CultureInfo.InvariantCulture),
                 CreatedDate = DateTime.ParseExact(timeDictionary["Registered on"], "dd-MMM-yyyy", CultureInfo.InvariantCulture),
                 ExpirationDate = DateTime.ParseExact(timeDictionary["Expiry date"], "dd-MMM-yyyy", CultureInfo.InvariantCulture),

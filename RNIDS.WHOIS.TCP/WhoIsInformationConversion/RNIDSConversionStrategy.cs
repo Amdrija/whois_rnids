@@ -14,7 +14,7 @@ namespace RNIDS.WHOIS.TCP.WhoIsInformationConversion
             
             return new Domain()
             {
-                Name = whoIsResponse["Domain name"],
+                Name = whoIsResponse["Domain name"].ToLower(),
                 DomainId = whoIsResponse["ID Number"],
                 UpdatedDate = DateTime.ParseExact(whoIsResponse["Modification date"], "dd.MM.yyyy HH:mm:ss", CultureInfo.InvariantCulture),
                 CreatedDate = DateTime.ParseExact(whoIsResponse["Registration date"], "dd.MM.yyyy HH:mm:ss", CultureInfo.InvariantCulture),

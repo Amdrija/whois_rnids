@@ -13,7 +13,7 @@ namespace RNIDS.WHOIS.TCP.WhoIsInformationConversion
             
             return new Domain()
             {
-                Name = whoIsResponse["Domain Name"],
+                Name = whoIsResponse["Domain Name"].ToLower(),
                 DomainId = whoIsResponse["Registry Domain ID"],
                 UpdatedDate = DateTime.Parse(whoIsResponse["Updated Date"]),
                 CreatedDate = DateTime.Parse(whoIsResponse["Creation Date"]),

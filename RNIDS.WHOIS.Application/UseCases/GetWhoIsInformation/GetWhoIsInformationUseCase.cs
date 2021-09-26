@@ -26,11 +26,11 @@ namespace RNIDS.WHOIS.Application.UseCases.GetWhoIsInformation
         {
             string providerName = providerRepository.GetProvider(request.Domain);
 
-            Domain domain = await this.domainRepository.GetAsync(request.Domain.ToString());
+            Domain domain = await this.domainRepository.GetAsync(request.Domain.ToString().ToLower());
 
             if (domain == null)
             {
-                domain = await this.repository.GetAsync(request.Domain.ToString().GetPuny(), providerName.GetPuny());
+                domain = await this.repository.GetAsync(request.Domain.ToString().ToLower().GetPuny(), providerName.GetPuny());
                 await this.domainRepository.CreateAsync(domain);
             }
 

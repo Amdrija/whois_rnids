@@ -15,7 +15,7 @@ namespace RNIDS.WHOIS.TCP.WhoIsInformationConversion
             
             return new Domain()
             {
-                Name = whoIsResponse["domain"],
+                Name = whoIsResponse["domain"].ToLower(),
                 CreatedDate = DateTime.Parse(whoIsResponse["created"]),
                 ExpirationDate = DateTime.Parse(whoIsResponse["paid-till"]),
                 NameServers = whoIsResponse["nserver"],
